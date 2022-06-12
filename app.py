@@ -1,12 +1,12 @@
 from flask import Flask
-from crypt import method
 
-app = Flask(__name__)
+app=Flask(__name__)
 
 
-@app.route('/',method=method.GET)
+@app.route("/",methods=['GET','POST'])
 def index():
-    return "application started"
+    return "Starting Machine Learning Project"
 
-if __name__ =="__main__":
- app.run(debug=True)
+
+if __name__=="__main__":
+    app.run(debug=True)
